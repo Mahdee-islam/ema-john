@@ -12,7 +12,7 @@ const Product = (props) => {
         <div className = "product">
             <img src= {img} alt="" />
             <div className="product-detail">
-                <h3> { name }</h3>
+                <h3 className = "name"> { name }</h3>
                 <p> <small> by: { seller} </small></p>
                 <p> ${ price } </p>
                 <p> <small> Only {stock} left-order now</small></p>

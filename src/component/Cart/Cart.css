@@ -1,3 +1,7 @@
 .center {
   text-align: center;
 }
+.grand {
+  color: rgb(201, 40, 40);
+  font-weight: bold;
+}
