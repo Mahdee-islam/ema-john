@@ -6,6 +6,8 @@ import Shop from './component/Shop/Shop';
 import Inventory from './component/Inventory/Inventory';
 import NotFound from './component/NotFound/NotFound';
 import PlaceOrder from './component/PlaceOrder/PlaceOrder';
+import Login from './component/Login/Login';
+import Register from './component/Register/Register';
 
 
 
@@ -23,6 +25,8 @@ function App() {
           <Route path = "/review" element = { <OrderReview/> }  />
           <Route path = "/inventory" element = { <Inventory/> } />
           <Route path = "/placeorder" element = { <PlaceOrder/>} />
+          <Route path = "/login" element = { <Login/>} />
+          <Route path = "/register" element = { <Register/>} />
           <Route path = "*" element = { <NotFound/> } />
       </Routes>
       </BrowserRouter>
