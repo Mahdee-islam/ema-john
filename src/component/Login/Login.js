@@ -1,8 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useAuth from '../Hook/useAuth';
 import './Login.css';
 
+
 const Login = () => {
+   const { signInUsingGoogle } = useAuth();
+   const location = useLocation();
+   const navigate = useNavigate();
+   const redirect_url =  location.state?.form || '/shop';
+   console.log('came form', location.state?.form);
+
+   const handleGoogleLogin = () => {
+       signInUsingGoogle()
+       .then(result => {
+        navigate(redirect_url);
+    })
+   }
     return (
         <div>
             <div className="main-section">
@@ -24,7 +38,7 @@ const Login = () => {
                <Link to = "/register" className='register'>Create your Emajohn account</Link>
                <br />
                <br />
-               <button className='regular-btn'>Google Sign-in</button>
+               <button className='regular-btn' onClick={handleGoogleLogin}>Google Sign-in</button>
            </div>
         </div>
     );

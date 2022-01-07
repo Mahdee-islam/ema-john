@@ -28,5 +28,22 @@ Steps for Authentication:
 2.Setup signout method
 3.create useState
 4.special observer
+5.return necessery methods and states from useFirebse.
+
+----Step#4----
+
+1.create an auth context
+2.create context provider
+3.set context provider context value
+4.create useAuth custom hook
+5.use Auth provider.
+
+----Step#5----
+
+1.create private route
+2.set private route.
+
+----Step#6----
+1.after login redirect user to their desire destination
 
 */

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import { clearTheCart, removeFromDb } from '../../utilities/fakedb';
+import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import useCart from '../Hook/useCart';
 import useProducts from '../Hook/useProducts';
@@ -19,9 +19,9 @@ const OrderReview = () => {
    }
    let navigate = useNavigate();
    const handlePlaceOrder = () => {
-    navigate("/placeorder");
-    setCart([]);
-    clearTheCart();
+    navigate("/shipping");
+    /* setCart([]);
+    clearTheCart(); */
    }
    
     return (
@@ -33,7 +33,7 @@ const OrderReview = () => {
             </div>
             <div className="cart-container">
                 <Cart cart = { cart } >
-                    <button onClick = { handlePlaceOrder } className = "regular-btn">Place Order</button>
+                    <button onClick = { handlePlaceOrder } className = "regular-btn">Procced to shipping</button>
                 </Cart>
             </div>
         </div>

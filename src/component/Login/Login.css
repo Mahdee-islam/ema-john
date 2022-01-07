@@ -4,7 +4,7 @@
   align-items: center;
 }
 .main-section {
-  height: 400px;
+  height: 350px;
   border: 1px solid #949494;
   margin: 30px 450px;
   padding: 10px 35px;
@@ -28,3 +28,4 @@
   border: gray;
   font-weight: light;
 }
+
